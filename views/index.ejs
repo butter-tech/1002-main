@@ -4,58 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles.css">
-    <title>Webshop Megrendelés</title>
+    <title>Forma 1-es Aláírt Tárgyak Webshopja</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Forma 1-es Aláírt Tárgyak Megrendelése</h1>
-        
-        <div class="products">
-            <div class="product">
-                <img src="/products/f1_helmet.jpg" alt="Forma 1-es sisak" class="product-image">
-                <h2>Forma 1-es Sisak</h2>
-            </div>
-            <div class="product">
-                <img src="/products/f1_car_model.jpg" alt="Forma 1-es autó modell" class="product-image">
-                <h2>Forma 1-es Autó Modell</h2>
-            </div>
-            <div class="product">
-                <img src="/products/f1_photo.jpg" alt="Forma 1-es aláírt fénykép" class="product-image">
-                <h2>Forma 1-es Aláírt Fénykép</h2>
-            </div>
+    <header>
+        <div class="container">
+            <h1>Forma 1-es Aláírt Tárgyak Webshopja</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Főoldal</a></li>
+                    <li><a href="/products">Termékek</a></li>
+                    <li><a href="/contact">Kapcsolat</a></li>
+                    <li><a href="/about">Rólunk</a></li>
+                </ul>
+            </nav>
         </div>
-
-        <form action="/order" method="POST" class="form-group">
-            <label for="name">Név:</label>
-            <input type="text" id="name" name="name" required>
-            <br>
-
-            <label for="billingAddress">Számlázási cím:</label>
-            <input type="text" id="billingAddress" name="billingAddress" placeholder="Ország, Irányítószám, Város, Utca és házszám" required>
-            <br>
-
-            <label for="shippingAddress">Szállítási cím:</label>
-            <input type="text" id="shippingAddress" name="shippingAddress" placeholder="Ország, Irányítószám, Város, Utca és házszám" required>
-            <br>
-
-            <label for="couponCode">Kuponkód (opcionális):</label>
-            <input type="text" id="couponCode" name="couponCode" pattern="[A-Z]{2}-\d{4}">
-            <br>
-
-            <label for="cardNumber">Bankkártya szám:</label>
-            <input type="text" id="cardNumber" name="cardNumber" pattern="\d{4}-\d{4}-\d{4}-\d{4}" required>
-            <br>
-
-            <label for="expiryDate">Lejárati dátum (HH/ÉÉ):</label>
-            <input type="text" id="expiryDate" name="expiryDate" pattern="\d{2}/\d{2}" required>
-            <br>
-
-            <label for="securityCode">Biztonsági kód:</label>
-            <input type="text" id="securityCode" name="securityCode" pattern="\d{3}" required>
-            <br>
-
-            <button type="submit">Rendelés</button>
-        </form>
+    </header>
+    <div class="container">
+        <section class="intro">
+            <h2>Forma 1-es Hírek</h2>
+            <p>Fedezze fel a legfrissebb Forma 1-es híreket, eseményeket és érdekességeket!</p>
+        </section>
+        <section class="news">
+            <div class="news-card">
+                <img src="/products/f1_news_1.jpg" alt="Forma 1-es hír 1">
+                <h3>Új csapatok a 2025-ös szezonban</h3>
+                <p>A Forma 1 jövője új csapatok érkezésével gazdagodik. Tudd meg, kik csatlakoznak a mezőnyhöz!</p>
+            </div>
+            <div class="news-card">
+                <img src="/products/f1_news_2.jpg" alt="Forma 1-es hír 2">
+                <h3>Pilóták véleménye a legújabb szabálymódosításokról</h3>
+                <p>A legújabb szabálymódosításokkal kapcsolatos pilóta reakciók és vélemények.</p>
+            </div>
+            <div class="news-card">
+                <img src="/products/f1_news_3.jpg" alt="Forma 1-es hír 3">
+                <h3>Forma 1-es versenynaptár 2025-re</h3>
+                <p>A következő év versenynaptára és a várva várt helyszínek bemutatása.</p>
+            </div>
+        </section>
+        <section class="footer">
+            <p>&copy; 2024 Forma 1-es Webshop. Minden jog fenntartva.</p>
+        </section>
     </div>
 </body>
 </html>

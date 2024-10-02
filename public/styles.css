@@ -1,88 +1,86 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #000; /* Fekete háttér az egész oldalra */
     margin: 0;
     padding: 0;
+    color: white; /* Alapértelmezett fehér szöveg az oldalon */
+}
+
+header {
+    background-color: #d50000; /* Piros háttér a fejlécnek */
+    color: white; /* Fehér szöveg a fejlécben */
+    padding: 10px 0;
 }
 
 .container {
     width: 80%;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #000; /* Fekete háttér a konténernek */
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
 h1, h2, h3 {
-    color: #333;
-    text-align: center; /* Center align titles */
+    color: #d50000; /* Piros szöveg a címekhez */
 }
 
-.form-group {
-    margin-bottom: 15px;
+nav ul {
+    list-style: none;
+    padding: 0;
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
+nav ul li {
+    display: inline;
+    margin-right: 20px;
 }
 
-input[type="text"],
-input[type="radio"] {
-    width: calc(100% - 20px);
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+nav a {
+    color: white; /* Fehér szín a nav linkeknek */
+    text-decoration: none;
+    font-weight: bold; /* Döntött betűtípus */
 }
 
-button {
-    background-color: #d50000;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%; /* Full width button */
+nav a:hover {
+    color: #f4f4f4; /* Világosabb szürke hover effektus */
+    background-color: #d50000; /* Piros háttér hover alatt */
+    padding: 5px 10px; /* További párnázás a hover effektus alatt */
+    border-radius: 5px; /* Kerekített sarkok a hover alatt */
 }
 
-button:hover {
-    background-color: #b30000;
+.intro {
+    margin-bottom: 20px;
 }
 
-.product-image {
-    width: 100%; /* Full width product image */
-    height: auto;
-    border-radius: 5px;
-}
-
-.products {
+.news {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: space-between; /* Egyenletesen osztja el a helyet */
     margin-top: 20px;
 }
 
-.product {
-    background-color: #fff;
-    border: 1px solid #ddd;
+.news-card {
+    background-color: #111; /* Sötétebb fekete háttér a hírek kártyáihoz */
+    border: 1px solid #444; /* Szürke keret a kártyák körül */
     border-radius: 5px;
-    padding: 10px;
     margin: 10px;
-    width: 200px; /* Fixed width for product cards */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 30%; /* 3 kártya egymás mellett */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    text-align: center; /* Középre igazítjuk a szöveget */
+    color: white; /* Fehér szöveg a kártyákban */
 }
 
-.success-message {
-    background-color: #d4edda;
-    padding: 15px;
-    border-radius: 5px;
-    margin-bottom: 15px;
+.news-card img {
+    width: 100%; /* Kép kitöltés */
+    height: auto; /* Magasság arányos */
+    max-height: 150px; /* Max magasság */
+    object-fit: cover; /* Kép megjelenítése */
 }
 
-.error-message {
-    background-color: #f8d7da;
-    padding: 15px;
-    border-radius: 5px;
-    margin-bottom: 15px;
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    background-color: #000; /* Fekete háttér a láblécnek */
+    color: white; /* Fehér szöveg a láblécben */
+    padding: 10px 0; /* Kicsit több hely a láblécben */
 }
