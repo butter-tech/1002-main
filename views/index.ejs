@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Webshop Megrendelés</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Forma 1-es Aláírt Tárgyak Megrendelése</h1>
+        
+        <div class="products">
+            <div class="product">
+                <img src="/products/f1_helmet.jpg" alt="Forma 1-es sisak" class="product-image">
+                <h2>Forma 1-es Sisak</h2>
+            </div>
+            <div class="product">
+                <img src="/products/f1_car_model.jpg" alt="Forma 1-es autó modell" class="product-image">
+                <h2>Forma 1-es Autó Modell</h2>
+            </div>
+            <div class="product">
+                <img src="/products/f1_photo.jpg" alt="Forma 1-es aláírt fénykép" class="product-image">
+                <h2>Forma 1-es Aláírt Fénykép</h2>
+            </div>
+        </div>
+
+        <form action="/order" method="POST" class="form-group">
+            <label for="name">Név:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+
+            <label for="billingAddress">Számlázási cím:</label>
+            <input type="text" id="billingAddress" name="billingAddress" placeholder="Ország, Irányítószám, Város, Utca és házszám" required>
+            <br>
+
+            <label for="shippingAddress">Szállítási cím:</label>
+            <input type="text" id="shippingAddress" name="shippingAddress" placeholder="Ország, Irányítószám, Város, Utca és házszám" required>
+            <br>
+
+            <label for="couponCode">Kuponkód (opcionális):</label>
+            <input type="text" id="couponCode" name="couponCode" pattern="[A-Z]{2}-\d{4}">
+            <br>
+
+            <label for="cardNumber">Bankkártya szám:</label>
+            <input type="text" id="cardNumber" name="cardNumber" pattern="\d{4}-\d{4}-\d{4}-\d{4}" required>
+            <br>
+
+            <label for="expiryDate">Lejárati dátum (HH/ÉÉ):</label>
+            <input type="text" id="expiryDate" name="expiryDate" pattern="\d{2}/\d{2}" required>
+            <br>
+
+            <label for="securityCode">Biztonsági kód:</label>
+            <input type="text" id="securityCode" name="securityCode" pattern="\d{3}" required>
+            <br>
+
+            <button type="submit">Rendelés</button>
+        </form>
+    </div>
+</body>
+</html>
