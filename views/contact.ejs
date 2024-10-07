@@ -23,18 +23,31 @@
     <div class="container">
         <section class="contact-info">
             <h2>Vegye fel velünk a kapcsolatot!</h2>
-            <p>Email: info@f1shop.com</p>
-            <p>Telefon: +36 1 234 5678</p>
+            <p>Email: <a href="mailto:info@f1shop.com">info@f1shop.com</a></p>
+            <p>Telefon: <a href="tel:+3612345678">+36 1 234 5678</a></p>
+        </section>
+
+        <section class="contact-form">
+            <h3>Írjon nekünk üzenetet!</h3>
             <form action="/contact" method="POST">
-                <label for="name">Név:</label>
-                <input type="text" id="name" name="name" required>
-                <br>
-                <label for="message">Üzenet:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-                <br>
-                <button type="submit">Küldés</button>
+                <div class="form-group">
+                    <label for="name">Név:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Üzenet:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn">Küldés</button>
             </form>
         </section>
     </div>
+    <footer>
+        <div class="container footer">
+            <p>&copy; 2024 Forma 1-es Webshop. Minden jog fenntartva.</p>
+        </div>
+    </footer>
 </body>
 </html>

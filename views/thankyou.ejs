@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles.css">
-    <title>Sikeres Rendelés</title>
+    <title>Köszönjük az Üzenetét!</title>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Sikeres Rendelés</h1>
+            <h1>Köszönjük az Üzenetét!</h1>
             <nav>
                 <ul>
                     <li><a href="/">Főoldal</a></li>
@@ -20,15 +20,16 @@
             </nav>
         </div>
     </header>
+    
     <div class="container">
-        <h2>Köszönjük a rendelését, <%= name %>!</h2>
-        <p>A rendelése sikeresen feldolgozásra került.</p>
-        <p><strong>Termék:</strong> <%= product %></p>
-        <p><strong>Számlázási cím:</strong> <%= billingAddress %></p>
-        <p><strong>Szállítási cím:</strong> <%= shippingAddress %></p>
-        
-        <a href="/" class="btn">Vissza a Főoldalra</a>
+        <section class="thank-you-message">
+            <h2>Köszönjük, hogy felvette velünk a kapcsolatot!</h2>
+            <p>Hamarosan jelentkezni fogunk az üzenetével kapcsolatban.</p>
+            <p>Ha sürgős kérdése van, ne habozzon felhívni minket a <strong><a href="tel:+3612345678">+36 1 234 5678</a></strong> számon!</p>
+            <p>Még egyszer köszönjük, és reméljük, hogy a legjobbat tudjuk nyújtani Önnek!</p>
+        </section>
     </div>
+    
     <footer>
         <div class="container footer">
             <p>&copy; 2024 Forma 1-es Webshop. Minden jog fenntartva.</p>

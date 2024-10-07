@@ -26,13 +26,21 @@ export class AppController {
         return {};
     }
 
+    @Post('contact') // Az üzenet küldéséhez kapcsolódó útvonal
+    @Render('thankyou') // Köszönő oldal
+    async sendMessage(@Body() body) {
+        // Itt lehet kezelni az üzenetet (pl. elmenteni az adatbázisba, e-mailt küldeni stb.)
+        return {}; // Itt visszatérhetünk egy üzenettel is, ha szükséges
+    }
+
     @Post('order')
-    @Render('order') // Megrendelés oldal
+    @Render('order') // Rendelés oldal
     placeOrder(@Body() body) {
         return {
             name: body.name,
             billingAddress: body.billingAddress,
             shippingAddress: body.shippingAddress,
+            product: body.product // hozzáadva a termék
         };
     }
 }

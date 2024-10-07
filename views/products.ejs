@@ -5,6 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles.css">
     <title>Termékek</title>
+    <style>
+        .product-grid {
+            display: flex;
+            gap: 20px; /* Adds space between product cards */
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .product-card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 10px; /* Reduced padding for smaller cards */
+            text-align: center;
+            transition: transform 0.2s; /* Animation on hover */
+            max-width: 250px; /* Limit card width */
+            box-sizing: border-box; /* Ensure padding is included in width */
+        }
+        .product-card:hover {
+            transform: scale(1.05); /* Scale effect on hover */
+        }
+        .product-card img {
+            width: 100%; /* Make image responsive */
+            height: 150px; /* Set uniform height for all images */
+            object-fit: cover; /* Maintain aspect ratio */
+            border-radius: 8px;
+        }
+        .product-card form {
+            margin-top: 10px; /* Space between description and form */
+        }
+        .product-card input {
+            width: 90%; /* Fit input fields within the card */
+            margin: 5px 0; /* Space above and below inputs */
+            padding: 5px; /* Input padding */
+            border: 1px solid #ccc; /* Input border */
+            border-radius: 4px; /* Rounded corners for inputs */
+        }
+        .btn {
+            margin-top: 10px; /* Space above button */
+            padding: 10px 15px; /* Button padding */
+            background-color: #007bff; /* Button background color */
+            color: white; /* Button text color */
+            border: none;
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+        }
+        .btn:hover {
+            background-color: #0056b3; /* Darker button on hover */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -20,25 +68,57 @@
             </nav>
         </div>
     </header>
+
     <div class="container">
         <section class="products">
             <h2>Termékeink</h2>
-            <div class="product-card">
-                <img src="/products/f1_helmet.jpg" alt="F1 Sisak">
-                <h3>Forma 1-es Sisak</h3>
-                <p>Aláírt sisak a legjobb pilóták által. Exkluzív darab!</p>
-            </div>
-            <div class="product-card">
-                <img src="/products/f1_car_model.jpg" alt="F1 Autó Modell">
-                <h3>Forma 1-es Autó Modell</h3>
-                <p>Részletes modell, amely hűen tükrözi a versenyautókat. Ideális gyűjtőknek!</p>
-            </div>
-            <div class="product-card">
-                <img src="/products/f1_photo.jpg" alt="F1 Fotó">
-                <h3>Aláírt F1 Fotó</h3>
-                <p>Exkluzív aláírt fotók a legjobb Forma 1-es pilótákról!</p>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="/products/f1_helmet.jpg" alt="F1 Sisak">
+                    <h3>Forma 1-es Sisak</h3>
+                    <p>Aláírt sisak a legjobb pilóták által. Exkluzív darab!</p>
+                    <form action="/order" method="POST">
+                        <input type="hidden" name="product" value="Forma 1-es Sisak">
+                        <input type="text" name="name" placeholder="Név" required>
+                        <input type="text" name="billingAddress" placeholder="Számlázási cím" required>
+                        <input type="text" name="shippingAddress" placeholder="Szállítási cím" required>
+                        <button type="submit" class="btn">Vásárlás</button>
+                    </form>
+                </div>
+
+                <div class="product-card">
+                    <img src="/products/f1_car_model.jpg" alt="F1 Autó Modell">
+                    <h3>Forma 1-es Autó Modell</h3>
+                    <p>Részletes modell, amely hűen tükrözi a versenyautókat. Ideális gyűjtőknek!</p>
+                    <form action="/order" method="POST">
+                        <input type="hidden" name="product" value="Forma 1-es Autó Modell">
+                        <input type="text" name="name" placeholder="Név" required>
+                        <input type="text" name="billingAddress" placeholder="Számlázási cím" required>
+                        <input type="text" name="shippingAddress" placeholder="Szállítási cím" required>
+                        <button type="submit" class="btn">Vásárlás</button>
+                    </form>
+                </div>
+
+                <div class="product-card">
+                    <img src="/products/f1_photo.jpg" alt="F1 Fotó">
+                    <h3>Aláírt F1 Fotó</h3>
+                    <p>Exkluzív aláírt fotók a legjobb Forma 1-es pilótákról!</p>
+                    <form action="/order" method="POST">
+                        <input type="hidden" name="product" value="Aláírt F1 Fotó">
+                        <input type="text" name="name" placeholder="Név" required>
+                        <input type="text" name="billingAddress" placeholder="Számlázási cím" required>
+                        <input type="text" name="shippingAddress" placeholder="Szállítási cím" required>
+                        <button type="submit" class="btn">Vásárlás</button>
+                    </form>
+                </div>
             </div>
         </section>
     </div>
+
+    <footer>
+        <div class="container footer">
+            <p>&copy; 2024 Forma 1-es Webshop. Minden jog fenntartva.</p>
+        </div>
+    </footer>
 </body>
 </html>
