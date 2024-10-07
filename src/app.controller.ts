@@ -26,6 +26,12 @@ export class AppController {
         return {};
     }
 
+    @Get('order') // Új végpont az order oldal megjelenítésére
+    @Render('order') // Rendelés oldal
+    getOrder() {
+        return {}; // Ez üres lehet, vagy adhatunk vissza alapértelmezett értékeket is
+    }
+
     @Post('contact') // Az üzenet küldéséhez kapcsolódó útvonal
     @Render('thankyou') // Köszönő oldal
     async sendMessage(@Body() body) {
@@ -33,9 +39,9 @@ export class AppController {
         return {}; // Itt visszatérhetünk egy üzenettel is, ha szükséges
     }
 
-    @Post('order')
-    @Render('order') // Rendelés oldal
-    placeOrder(@Body() body) {
+    @Post('order') // Rendelés
+    async placeOrder(@Body() body) {
+        // Az űrlap adatainak kezelése
         return {
             name: body.name,
             billingAddress: body.billingAddress,

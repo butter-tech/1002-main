@@ -4,35 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles.css">
-    <title>Sikeres Rendelés</title>
+    <title>Rendelés Megerősítése</title>
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Sikeres Rendelés</h1>
-            <nav>
-                <ul>
-                    <li><a href="/">Főoldal</a></li>
-                    <li><a href="/products">Termékek</a></li>
-                    <li><a href="/contact">Kapcsolat</a></li>
-                    <li><a href="/about">Rólunk</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1>Rendelés Megerősítése</h1>
     </header>
-    <div class="container">
-        <h2>Köszönjük a rendelését, <%= name %>!</h2>
-        <p>A rendelése sikeresen feldolgozásra került.</p>
-        <p><strong>Termék:</strong> <%= product %></p>
-        <p><strong>Számlázási cím:</strong> <%= billingAddress %></p>
-        <p><strong>Szállítási cím:</strong> <%= shippingAddress %></p>
-        
-        <a href="/" class="btn">Vissza a Főoldalra</a>
-    </div>
+    <main>
+        <h2>Köszönjük a vásárlást, <%= name || 'Kedves Vásárló' %>!</h2>
+        <p>A rendelésed címe: <%= shippingAddress || 'N/A' %></p>
+        <p>Számlázási cím: <%= billingAddress || 'N/A' %></p>
+        <p>Rendelt termék: <%= product || 'N/A' %></p>
+        <p>A rendelés feldolgozása folyamatban van.</p>
+    </main>
     <footer>
-        <div class="container footer">
-            <p>&copy; 2024 Forma 1-es Webshop. Minden jog fenntartva.</p>
-        </div>
+        <p>&copy; 2024 Forma 1-es Webshop. Minden jog fenntartva.</p>
     </footer>
 </body>
 </html>
